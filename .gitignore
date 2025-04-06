@@ -1,6 +1,6 @@
 # Ignora ambientes virtuais
 venv/
-.env/
+.env
 .venv/
 .env.local
 
