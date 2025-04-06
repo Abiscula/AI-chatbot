@@ -1,7 +1,11 @@
 import flet as ft
 
 def build_input_field(on_send_click):
-    input_field = ft.TextField(label="Digite sua mensagem...", expand=True)
+    input_field = ft.TextField(
+        label="Digite sua mensagem...", 
+        expand=True, 
+        autofocus=True,
+      )
     send_button = ft.ElevatedButton("Enviar", on_click=on_send_click)
     return input_field, send_button
 
