@@ -1,0 +1,26 @@
+# Ignora ambientes virtuais
+venv/
+.env/
+.venv/
+
+# Ignora arquivos compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignora arquivos do VS Code
+.vscode/
+
+# Ignora logs e temporários
+*.log
+*.tmp
+
+# Ignora arquivos de cache
+.cache/
+*.sqlite3
+
+# Ignora arquivos do Jupyter
+.ipynb_checkpoints/
+
+# Ignora dependências locais
+pip-wheel-metadata/
