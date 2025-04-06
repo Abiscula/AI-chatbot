@@ -2,6 +2,7 @@
 venv/
 .env/
 .venv/
+.env.local
 
 # Ignora arquivos compilados do Python
 __pycache__/
