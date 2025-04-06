@@ -11,18 +11,22 @@ client = Groq(
 )
 
 
-def send_message(message):
+def send_message(message, msg_list=[]):
+  msg_list.append({ "role": "user", "content": message })
+
   chat_completion = client.chat.completions.create(
-    messages=[
-      {
-        "role": "user",
-        "content": message,
-      }
-    ],
-    model=IA_MODEL,
+    messages = msg_list,
+    model = IA_MODEL,
   )
-  return chat_completion.choices[0].message.content
+  return chat_completion.choices[0].message
 
+msg_list = []
+while True:
+  text = input("Escreva sua mensagem: ")
 
-# Teste
-print(send_message("Em que ano einstein publicou a teoria geral da relatividade?"))
+  if text.lower() == "sair":
+    break
+  else:
+    response = send_message(text, msg_list)
+    msg_list.append(response)
+    print(response.content)
